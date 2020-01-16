@@ -105,9 +105,9 @@ public class Student {
     }
 
 
-
     //ToString method
-    public String ToString(){
+    @Override
+    public String toString() {
         return "\n\n\nStudent "+ nameOfSudent
                 + ";\nAge: " + ageOfStudent
                 + " m;\nHeight: " + heightOfStudentInMeters
@@ -116,7 +116,6 @@ public class Student {
                 + ";\nCourse: " +  courseOfStudying
                 + ";\nRating: " + ratingOfStudent;
     }
-
 
     //Static method printStaticField()
     public static void printStaticQuantityOfScholarshipInUAN(){

@@ -9,9 +9,9 @@ public class StudentsGroup {
         Student secondStudent = new Student(18, 2, "Oxford University", "CS13");
         Student thirdStudent = new Student("James Bond", 190.5, 200, 19, 3, "LNU", "AI-11");
 
-        System.out.println(firstStudent.ToString());
-        System.out.println(secondStudent.ToString());
-        System.out.println(thirdStudent.ToString());
+        System.out.println(firstStudent);
+        System.out.println(secondStudent);
+        System.out.println(thirdStudent);
 
         Student.printStaticQuantityOfScholarshipInUAN();
         //Student.printQuantityOfScholarshipInUAN();non-static method printQuantityOfScholarshipInUAN() cannot be referenced from a static context
@@ -26,7 +26,7 @@ public class StudentsGroup {
 
         System.out.println("\n\n---------GROUP OF STUDENTS---------\n");
         for(Student counter: groupOfStudents){
-            System.out.println(counter.ToString());
+            System.out.println(counter);
         }
     }
 }
