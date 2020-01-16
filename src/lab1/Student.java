@@ -3,7 +3,7 @@ package lab1;
 public class Student {
 
     //default fields
-    private String nameOfSudent;
+    private String nameOfStudent;
     private double heightOfStudentInMeters;
     private double ratingOfStudent;
 
@@ -18,13 +18,14 @@ public class Student {
     protected String nameOfUniversity;
     protected String nameOfGroup;
 
-
+    private static final int emptyValueForNumbers = 0;
+    private static final String emptyValueForString = null;
     //default constructor
     public Student(){}
 
     //constructor with all fields
     public Student(String nameOfSudent, double heightOfStudentInMeters, double ratingOfStudent, int ageOfStudent, int courseOfStudying, String nameOfUniversity, String nameOfGroup) {
-        this.nameOfSudent = nameOfSudent;
+        this.nameOfStudent = nameOfSudent;
         this.heightOfStudentInMeters = heightOfStudentInMeters;
         this.ratingOfStudent = ratingOfStudent;
         this.ageOfStudent = ageOfStudent;
@@ -34,18 +35,18 @@ public class Student {
     }
     //constructor with 4 fields
     public Student(int ageOfStudent, int courseOfStudying, String nameOfUniversity, String nameOfGroup) {
-        this(null, 0, 0, ageOfStudent, courseOfStudying, nameOfUniversity, nameOfGroup);
+        this(emptyValueForString, emptyValueForNumbers, emptyValueForNumbers, ageOfStudent, courseOfStudying, nameOfUniversity, nameOfGroup);
     }
 
 
 
     //GETTERS AND SETTERS TO ALL FIELDS
-    public String getNameOfSudent() {
-        return nameOfSudent;
+    public String nameOfStudent() {
+        return nameOfStudent;
     }
 
-    public void setNameOfSudent(String nameOfSudent) {
-        this.nameOfSudent = nameOfSudent;
+    public void setNameOfStudent(String nameOfStudent) {
+        this.nameOfStudent = nameOfStudent;
     }
 
     public double getHeightOfStudentInMeters() {
@@ -108,13 +109,13 @@ public class Student {
     //ToString method
     @Override
     public String toString() {
-        return "\n\n\nStudent "+ nameOfSudent
-                + ";\nAge: " + ageOfStudent
-                + " m;\nHeight: " + heightOfStudentInMeters
-                + ";\nUniversity: " + nameOfUniversity
-                + ";\nGroup: " + nameOfGroup
-                + ";\nCourse: " +  courseOfStudying
-                + ";\nRating: " + ratingOfStudent;
+        return "\n\n\nStudent "+ nameOfStudent
+                + "\nAge: " + ageOfStudent
+                + "\nHeight: " + heightOfStudentInMeters
+                + " m\nUniversity: " + nameOfUniversity
+                + "\nGroup: " + nameOfGroup
+                + "\nCourse: " +  courseOfStudying
+                + "\nRating: " + ratingOfStudent;
     }
 
     //Static method printStaticField()
@@ -129,7 +130,7 @@ public class Student {
 
     //resetValues method
     public void resetValues(String name, double height, double rating, int age, int course, String university, String group) {
-        nameOfSudent = name;
+        nameOfStudent = name;
         heightOfStudentInMeters = height;
         ratingOfStudent = rating;
         ageOfStudent = age;
